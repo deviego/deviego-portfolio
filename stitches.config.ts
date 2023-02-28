@@ -21,8 +21,8 @@ export const {
       cyan: '#80ffea',
       primary: '#f2f2f2',
       secondary: '#8f9ba8',
-      background: '#08070b',
-      hover: '#212024',
+      background: '#021622',
+      hover: '#9d0c0c',
       command: 'rgba(255, 255, 255, 0.05)',
       linkedin: '#0077b5',
       // instagramGradient:

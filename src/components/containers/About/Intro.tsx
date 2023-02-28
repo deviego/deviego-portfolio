@@ -11,10 +11,10 @@ export const Intro = () => {
     <Container>
       <Section>
         <Image
-          alt='Gabriel Trzimajewski'
-          src='/static/images/snowye-bw.jpg'
-          width='336'
-          height='336'
+          alt='DiegoDomingues'
+          src='/static/images/eu.webp'
+          width='1080'
+          height='1920'
           placeholder='blur'
           blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC'
           priority
@@ -33,11 +33,11 @@ export const Intro = () => {
             link: (
               <strong>
                 <a
-                  href='https://rocketseat.com.br'
+                  href='https://scratch.mit.edu/'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  Rocketseat
+                  Scratch
                 </a>
               </strong>
             )
