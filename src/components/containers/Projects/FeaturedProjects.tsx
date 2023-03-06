@@ -48,20 +48,22 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
           iconName: 'assignment'
         },
         {
-          title: 'duque.dev',
+          title: 'Dino',
           url: 'https://duque.dev',
-          description: t('duquedev.description'),
+          description: t('dino.description'),
           iconName: 'bolt'
         },
         {
-          title: 'Coffee Delivery',
-          url: 'https://coffee-delivery-pied.vercel.app/'
+          title: 'Alert',
+          url: 'https://snowye-ui.snowye.dev/',
+          description: t('alert.description'),
+          iconName: 'snowye-ui'
         },
         {
-          title: 'Snowye UI (WIP)',
+          title: 'Expense Balance',
           url: 'https://snowye-ui.snowye.dev/',
-          description: 'React Powered, accessible Component UI.',
-          iconName: 'snowye-ui'
+          description: t('expense.description'),
+          iconName: 'savings'
         }
       ]
     }

@@ -71,8 +71,9 @@ export default function Projects({
           'Portfólio Pessoal',
           'Your Product',
           'Zap GPT',
-          'duque.dev',
-          'Snowye UI (WIP)'
+          'Dino',
+          'Alert',
+          'Expense Balance'
         ]}
       />
 

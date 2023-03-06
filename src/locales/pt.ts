@@ -57,8 +57,13 @@ export default {
   'pages.projects.yourproducts.description':
     'Um Sistema com front e back para controle de estoque de um comércio.',
 
-  'pages.projects.Dino.description':
-    'Jogo do google que aprende a pular sozinho com inteligência artifical.',
+  'pages.projects.dino.description':
+    'Jogo Dino do google que aprende a pular os obstáculos sozinho com inteligência artificial.',
+
+  'pages.projects.alert.description':
+    'Alerta de aniversariante para empresas, verifica diariamente se há aniversariante e se houver ele envia um email para o superior da empresa.',
+  'pages.projects.expense.description':
+    'Uma interface que permite você acompanhar os gastos no detalinho',
 
   'pages.contact.title': 'Contato | Diego Domingues',
   'pages.contact.tagline': 'Me mande um email.',
