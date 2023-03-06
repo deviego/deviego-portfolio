@@ -55,7 +55,7 @@ export default function Projects({
           )}
           property='og:description'
         />
-        <meta content='https://snowye.dev/projects' property='og:url' />
+        <meta content='https://deviego.dev/projects' property='og:url' />
       </Head>
 
       <p
@@ -69,8 +69,8 @@ export default function Projects({
         featured={[
           'Personal Portfolio',
           'Portfólio Pessoal',
-          'Spaces',
-          'iFinance',
+          'Your Product',
+          'Zap GPT',
           'duque.dev',
           'Snowye UI (WIP)'
         ]}

@@ -36,15 +36,15 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
           iconName: 'book'
         },
         {
-          title: 'iFinance',
+          title: 'Zap GPT',
           url: 'https://ifinance.snowye.dev',
-          description: t('ifinance.description'),
-          iconName: 'savings'
+          description: t('zapgpt.description'),
+          iconName: 'zap'
         },
         {
-          title: 'Spaces',
+          title: 'Your Product',
           url: 'https://spaces.snowye.dev/',
-          description: t('spaces.description'),
+          description: t('yourproducts.description'),
           iconName: 'assignment'
         },
         {

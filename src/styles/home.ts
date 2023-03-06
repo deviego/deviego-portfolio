@@ -1,9 +1,8 @@
 import { styled } from '../../stitches.config';
 
 export const Title = styled('h1', {
-  background: 'linear-gradient(90deg,#021622, #fff)',
+  background: '#fff',
   WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent'
 });
 
 export const Container = styled('div', {

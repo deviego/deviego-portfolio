@@ -32,7 +32,7 @@ export default {
   'pages.about.description':
     'Meu nome é Diego Domingues. Mas pode me chamar de Deviego ✌️. Sou um Engenheiro Full-Stack por conta própria. Sou um cara que gosta de ajudar e compartilhar experiência sobre o mundo da programação',
   'pages.about.tagline': ' Aprender. Praticar. Evoluir.',
-  'pages.about.intro.1': 'Olá senhores e senhorita, me chamo Diego e hoje apresento me apresento',
+  'pages.about.intro.1': 'Esse é um breve resumo do meu inicio na carreira ',
   'pages.about.intro.2':
     'Eu comecei de uma forma meio inusitada indo passear aos fins de semana na casa do meu tio como de costumes e vendo ele programar com um bichinho amarelo no notebook deled (Descobri depois que era o Scratch) {link} por volta de 2020. fiquei apaixonado que nem dormi naquela noite criando um  joguinho.',
   'pages.about.intro.3':

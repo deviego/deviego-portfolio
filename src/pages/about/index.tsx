@@ -25,6 +25,14 @@ export default function About({
       primaryColor={primaryColor}
       secondaryColor={secondaryColor}
     >
+      
+       <h2>{t('bio')}</h2>
+      <blockquote>
+        <p>{t('description')}</p>
+      </blockquote>
+
+      
+      <Intro />
       <Head>
         <title>{t('title')}</title>
         <meta content={t('title')} property='og:title' />
@@ -34,14 +42,9 @@ export default function About({
         <meta content={`https://deviego.dev${imagePath}`} property='og:image' />
       </Head>
 
-      <Intro />
-
-      <h2>{t('bio')}</h2>
-      <blockquote>
-        <p>{t('description')}</p>
-      </blockquote>
-
       <h2>{t('career')}</h2>
+
+     
       <Career />
     </Base>
   );
