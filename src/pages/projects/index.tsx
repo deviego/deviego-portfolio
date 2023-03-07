@@ -73,7 +73,9 @@ export default function Projects({
           'Zap GPT',
           'Dino',
           'Alert',
-          'Expense Balance'
+          'Expense Balance',
+          'ETH-Login',
+          'Notificaton-Services'
         ]}
       />
 

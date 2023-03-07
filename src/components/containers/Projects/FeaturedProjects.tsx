@@ -31,39 +31,51 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
       projects: [
         {
           title: t('portfolio.title'),
-          url: 'https://github.com/Sn0wye/snowye.dev',
+          url: 'https://github.com/deviego/deviego-portfolio',
           description: t('portfolio.description'),
           iconName: 'book'
         },
         {
           title: 'Zap GPT',
-          url: 'https://ifinance.snowye.dev',
+          url: 'https://github.com/deviego/zapgpt',
           description: t('zapgpt.description'),
-          iconName: 'zap'
+          iconName: 'messageicon'
         },
         {
           title: 'Your Product',
-          url: 'https://spaces.snowye.dev/',
+          url: 'https://github.com/deviego/your-products',
           description: t('yourproducts.description'),
           iconName: 'assignment'
         },
         {
           title: 'Dino',
-          url: 'https://duque.dev',
+          url: 'https://github.com/deviego/dino',
           description: t('dino.description'),
-          iconName: 'bolt'
+          iconName: 'ps2'
         },
         {
           title: 'Alert',
-          url: 'https://snowye-ui.snowye.dev/',
+          url: 'https://github.com/deviego/SendAlert',
           description: t('alert.description'),
-          iconName: 'snowye-ui'
+          iconName: '@'
         },
         {
           title: 'Expense Balance',
-          url: 'https://snowye-ui.snowye.dev/',
+          url: 'https://github.com/deviego/expense-balance',
           description: t('expense.description'),
           iconName: 'savings'
+        },
+        {
+          title: 'ETH-Login',
+          url: 'https://github.com/deviego/ETH-login',
+          description: t('ethlogin.description'),
+          iconName: 'wallet'
+        },
+        {
+          title: 'Notificaton-Services',
+          url: 'https://github.com/deviego/notification-services',
+          description: t('notification.description'),
+          iconName: 'bell icon'
         }
       ]
     }

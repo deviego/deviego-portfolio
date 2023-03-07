@@ -36,26 +36,32 @@ export default {
   'pages.about.intro.2':
     'Eu comecei de uma forma meio inusitada indo passear aos fins de semana na casa do meu tio como de costumes e vendo ele programar com um bichinho amarelo no notebook deled (Descobri depois que era o Scratch) {link} por volta de 2020. fiquei apaixonado que nem dormi naquela noite criando um  joguinho.',
   'pages.about.intro.3':
-    'Atualmente, não estou trabalhando em nenhuma empresa, mas fazendo um projeto no Youtube criando projetos e infomando outros programadores sobre o mercado.',
+    'Atualmente, não estou trabalhando em nenhuma empresa, mas fazendo um projeto no YouTube criando projetos e informando outros programadores sobre o mercado.',
   'pages.about.intro.4':
     'Esportista desde cedo praticando <strong>Natação por (3 anos), karate (8 anos), Basquete (3 anos)</strong>. Quando não estou estudando ou fazendo um trabalho de criador de conteúdo, gosto de ir à academia, conversar com amigos no Discord, codar projetos paralelos e ajudar quem está começando na comunidade da <strong>Rocketseat</strong>,' ,
   'pages.about.career': 'Carreira',
 
   'pages.projects.title': 'Projetos | Diego Domingues',
   'pages.projects.description':
-    'Projetos paralelos são uma forma de converter seus <strong>pensamentos e personalidade</strong> em código. Aqui você pode ver os <strong>{totalProjects} diferentes</strong> aplicativos, projetos e bibliotecas em que tenho trabalhado.',
+    'Aqui tenho projetos paralelos, <strong> testes de vagas</strong>. Aqui você pode ver os <strong> diferentes</strong> projetos, aplicações e bibliotecas em que tenho desenvolvido.',
 
   'pages.projects.featured': 'Projetos em Destaque',
-  'pages.projects.all': 'Todos os projetos',
+  'pages.projects.all': 'Alguns outros',
 
   'pages.projects.portfolio.title': 'Portfólio Pessoal',
   'pages.projects.portfolio.description': 'Este portfolio. É open source!, e foi inspirado no do meu amigo Snowey.',
 
   'pages.projects.zapgpt.description':
-    'Projeto que eu fiz um boot com a inteligência do Chat GPT no Whatsapp.',
+    'Projeto que uso diariamente para tirar duvidas, juntei o Chat GPT com o WhatsApp.',
 
   'pages.projects.yourproducts.description':
     'Um Sistema com front e back para controle de estoque de um comércio.',
+
+  'pages.projects.ethlogin.description':
+    'Projeto web 3.0 que permite você fazer login no site coma sua carteira Metamask.',
+
+  'pages.projects.notification.description':
+    'Projeto de notificação avançado usando Nest JS',
 
   'pages.projects.dino.description':
     'Jogo Dino do google que aprende a pular os obstáculos sozinho com inteligência artificial.',
@@ -63,7 +69,7 @@ export default {
   'pages.projects.alert.description':
     'Alerta de aniversariante para empresas, verifica diariamente se há aniversariante e se houver ele envia um email para o superior da empresa.',
   'pages.projects.expense.description':
-    'Uma interface que permite você acompanhar os gastos no detalinho',
+    'Uma interface que permite você acompanhar os gastos no detalinho, e tenha um controle da sua vida financeira',
 
   'pages.contact.title': 'Contato | Diego Domingues',
   'pages.contact.tagline': 'Me mande um email.',
