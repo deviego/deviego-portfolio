@@ -49,7 +49,7 @@ export default {
   'pages.projects.all': 'Alguns outros',
 
   'pages.projects.portfolio.title': 'Portfólio Pessoal',
-  'pages.projects.portfolio.description': 'Este portfolio. É open source!, e foi inspirado no do meu amigo Snowey.',
+  'pages.projects.portfolio.description': 'Este portfolio. É open source! e foi inspirado no do meu amigo Snowey.',
 
   'pages.projects.zapgpt.description':
     'Projeto que uso diariamente para tirar duvidas, juntei o Chat GPT com o WhatsApp.',

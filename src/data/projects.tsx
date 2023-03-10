@@ -1,5 +1,5 @@
 export type Projects = {
-  year: string;
+  year?: string;
   projects: Project[];
 }[];
 

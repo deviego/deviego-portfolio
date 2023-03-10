@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { IEmailInputs } from '../../schemas/Email';
 
-export default async function SendMail(
+export default async function onSendMail(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
@@ -13,7 +13,7 @@ export default async function SendMail(
       const mailTransporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
-        service: 'gmail',
+        secure: true,
         auth: {
           user: process.env.NODEMAILER_USER,
           pass: process.env.NODEMAILER_PASSWORD
@@ -23,7 +23,7 @@ export default async function SendMail(
       const mailDetails = {
         from: data.name,
         to: String(process.env.NODEMAILER_USER),
-        subject: `${data.name} - via snowye.dev`,
+        subject: `${data.name} - via deviego.dev`,
         text: `
         Name: ${data.name}
         Email: ${data.email}

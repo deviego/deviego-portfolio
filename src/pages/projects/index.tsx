@@ -45,13 +45,13 @@ export default function Projects({
         <meta content={t('title')} property='og:title' />
         <meta
           content={stripHtml(
-            t('description', { totalProjects: String(totalProjects) })
+            t('description')
           )}
           name='description'
         />
         <meta
           content={stripHtml(
-            t('description', { totalProjects: String(totalProjects) })
+            t('description')
           )}
           property='og:description'
         />
@@ -60,7 +60,7 @@ export default function Projects({
 
       <p
         dangerouslySetInnerHTML={{
-          __html: t('description', { totalProjects: String(totalProjects) })
+          __html: t('description')
         }}
       />
 

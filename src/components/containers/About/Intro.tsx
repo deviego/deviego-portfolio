@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { useI18n } from '../../../locales';
-import { Pronunciation } from '../../Pronunciation';
 import { Container, Paragraph, Section } from './styles';
 
 export const Intro = () => {
@@ -29,7 +28,6 @@ export const Intro = () => {
         >
           <strong>{t('1')}</strong>
           {t('2', {
-            pronunciation: <Pronunciation />,
             link: (
               <strong>
                 <a

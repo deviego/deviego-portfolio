@@ -21,47 +21,62 @@ export default {
   'common.kbar.toast.title': 'Copied :D',
   'common.kbar.toast.description': 'You can now share it with anyone.',
 
-  'pages.home.title': 'Gabriel Trzimajewski',
-  'pages.home.meta': 'FrontEnd Engineer on its own.',
-  'pages.home.description':
-    'A guy who loves helping people and turning the world into a better place.',
+  'pages.home.title': 'Diego Domingues',
+  'pages.home.meta': 'Full Stack Engineer on its own.',
+  'pages.home.description': 'Generating value is the most important thing.',
 
-  'pages.about.title': 'About | Gabriel Trzimajewski',
+  'pages.about.title': 'About | Diego Domingues',
   'pages.about.bio': 'Bio',
   'pages.about.description':
-    "My name is Gabriel Trzimajewski. AKA Snowye ✌️. I'm a Frontend Engineer on its own. I'm a guy who loves helping people and turning the world into a better place.",
-  'pages.about.tagline': 'Code. Sleep. Repeat.',
-  'pages.about.intro.1': "Hey, I'm Gabriel Trzimajewski!",
+    'My name is Diego Domingues. But you can call me Deviego ✌️. I am a Full-Stack Engineer on my own. I am a guy who likes to help and share experience about the world of programming.',
+  'pages.about.tagline': 'Learn. Practice. Evolve',
+  'pages.about.intro.1': 'This is a brief summary of my career start',
   'pages.about.intro.2':
-    '{pronunciation}I started simply browsing in the internet and randomly discovered Javascript at {link} back on start of 2022.',
+    'I started in an unusual way going to walk on weekends at my uncle’s house as customs and watching him program with a yellow pet on the deled notebook (I found out later that it was Scratch) {link} around 2020. I fell in love that I didn’t even sleep that night creating a little game.',
   'pages.about.intro.3':
-    'I&apos;m currently working on myself and trying to improve my hard and soft skills aswell. I&apos;m from Brazil and a big fan of <strong>twenty one pilots</strong>.',
+    'Currently, I am not working in any company, but doing a project on YouTube creating projects and informing other programmers about the market.',
   'pages.about.intro.4':
-    'I believe the beauty of the world stand on the <strong>little things</strong>. When I&apos;m not working, I like going to the gym, hanging out with my friends on Discord, and of course, coding side projects and helping the <strong>open source</strong> community, such as <strong><a href="https://create.t3.gg">Create T3 App</a></strong>, in which I was part of the documentation translation team into Brazilian Portuguese.',
+    'Early sportsman practicing <Strong>Swimming for (3 years), karate (8 years), basketball (3 years)</Strong>. When I’m not studying or doing content creator work, I like to go to the gym, chat with friends on Discord, code side projects and help those starting out in the <Strong>Rocketseat</Strong> community,',
   'pages.about.career': 'Career',
 
-  'pages.projects.title': 'Projects | Gabriel Trzimajewski',
+  'pages.projects.title': 'Projects | Diego Domingues',
   'pages.projects.description':
-    "Side projects are a way to convert your <strong>thoughts and personality</strong> into code. Here you can see the <strong>{totalProjects} different.</strong> apps, projects and libraries that I've been working on.",
+    'Here I have parallel projects, <Strong> job tests</Strong>. Here you can see the <Strong> different </Strong> projects, applications and libraries in which I have developed',
   'pages.projects.featured': 'Featured Projects',
-  'pages.projects.all': 'All Projects',
+  'pages.projects.all': 'Others Projects',
 
   'pages.projects.portfolio.title': 'Personal Portfolio',
-  'pages.projects.portfolio.description': "This portfolio. It's open source!",
+  'pages.projects.portfolio.description':
+    "This portfolio. It's open source! and was inspired by my friend Snowey’s",
 
-  'pages.projects.ifinance.description':
-    'Finances app to keep track of your gains and expenses',
+  'pages.projects.zapgpt.description':
+    'Project that I use daily to remove doubts, I joined GPT Chat with WhatsApp.',
 
   'pages.projects.spaces.description':
     'A simple and straightforward todo app to get your tasks done best.',
 
-  'pages.projects.duquedev.description':
-    'Portfolio developed for Felipe Duque.',
+  'pages.projects.yourproducts.description':
+    'A system with front and back to control the stock of a trade.',
 
-  'pages.contact.title': 'Contact | Gabriel Trzimajewski',
+  'pages.projects.ethlogin.description':
+    'Web 3.0 project  that allows you to log into the site with your Metamask wallet.',
+
+  'pages.projects.notification.description':
+    'Advanced notification design using Nest JS',
+
+  'pages.projects.dino.description':
+    'Game Dino from google learning to jump the obstacles alone with artificial intelligence.',
+
+  'pages.projects.alert.description':
+    'Birthday alert for companies, checks daily for birthday and if there is he sends an email to the top of the company.',
+
+  'pages.projects.expense.description':
+    'An interface that allows you to track expenses in detail, and have a control of your financial life',
+
+  'pages.contact.title': 'Contact | Diego Domingues',
   'pages.contact.tagline': 'Email me. As in the good old days.',
   'pages.contact.description':
-    "<strong>I love chatting</strong> with software engineers, tech founders, students, and creators. <strong>I'm a busy person</strong>, so I can't promise that I'll reply to your email right away, but I'll try my best to respond in a timely manner.",
+    "can be a feedback, an invitation to a call, some vacancy or something. <br><Strong>I love chatting with software engineers, developers in general, students and creators. It will be a pleasure to exchange an idea.",
   'pages.contact.email': 'Send an email',
 
   'pages.contact.toast.success.title': 'Email sent :D',
