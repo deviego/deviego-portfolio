@@ -98,7 +98,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       keywords: 'view-source',
       section: t('sections.general'),
       perform: () =>
-        window.open('https://github.com/deviego', '_blank'),
+        window.open('https://github.com/deviego/deviego-portfolio', '_blank'),
       icon: (
         <Lottie
           lottieRef={sourceRef}
@@ -166,7 +166,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       shortcut: ['f', 'g'],
       keywords: 'go-github',
       section: t('sections.follow'),
-      perform: () => window.open('https://github.com/Sn0wye', '_blank'),
+      perform: () => window.open('https://github.com/deviego', '_blank'),
       icon: <RiGithubLine />
     },
     {
@@ -176,7 +176,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       keywords: 'go-linkedin',
       section: t('sections.follow'),
       perform: () =>
-        window.open('https://linkedin.com/in/gabriel-trzimajewski', '_blank'),
+        window.open('https://www.linkedin.com/in/diego-domingues-28a12a215/', '_blank'),
       icon: <RiLinkedinLine />
     },
     {
@@ -186,7 +186,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       keywords: 'go-instagram',
       section: t('sections.follow'),
       perform: () =>
-        window.open('https://www.instagram.com/gabtrzimajewski', '_blank'),
+        window.open('https://www.instagram.com/dev.iego', '_blank'),
       icon: <RiInstagramLine />
     }
   ];
