@@ -22,19 +22,19 @@ const links: Link[] = [
   },
   {
     title: 'GitHub',
-    url: 'https://github.com/Sn0wye',
+    url: 'https://github.com/deviego',
     icon: <BsGithub />,
     variant: 'github'
   },
   {
     title: 'LinkedIn',
-    url: 'https://linkedin.com/in/gabriel-trzimajewski',
+    url: 'https://www.linkedin.com/in/diego-domingues-28a12a215/',
     icon: <BsLinkedin />,
     variant: 'linkedin'
   },
   {
     title: 'Instagram',
-    url: 'https://instagram.com/gabtrzimajewski',
+    url: 'https://www.instagram.com/dev.iego',
     icon: <FaInstagram />,
     variant: 'instagram'
   }
