@@ -1,6 +1,7 @@
 {
-  "crons": [{
-    "path": "/api/email.ts",
-    "schedule": "0 10 * * *"
-  }]
+  "functions": {
+    "api/email.js": {
+      "memory": 3008,
+      "maxDuration": 30
+    } }
 }
