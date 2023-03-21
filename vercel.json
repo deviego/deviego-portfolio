@@ -3,5 +3,9 @@
     "api/email.js": {
       "memory": 3008,
       "maxDuration": 30
-    } }
+    } },
+    "env": {
+      "NODEMAILER_USER":"01transporteremail@gmail.com",
+      "NODEMAILER_PASSWORD": "@Deviego2022"
+    }
 }
