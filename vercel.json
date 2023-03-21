@@ -1,6 +1,6 @@
 {
   "crons": [{
-    "path": "/api/email",
+    "path": "/api/email.ts",
     "schedule": "0 10 * * *"
   }]
 }
