@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/email.js": {
+    "pages/api/email.js": {
       "memory": 3008,
       "maxDuration": 30
     } }
