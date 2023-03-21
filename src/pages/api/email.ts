@@ -34,7 +34,7 @@ export default async function onSendMail(
       return res.status(200).json({ message: 'Email sent' });
     } catch (err: any) {
       res
-        .status(500)
+        .status(510)
         .json({ message: `Email not sent - Error: ${err.message}` });
     }
   }
