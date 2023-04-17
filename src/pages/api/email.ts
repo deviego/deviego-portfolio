@@ -11,32 +11,36 @@ export default async function onSendMail(
       const data: IEmailInputs = req.body;
 
       const mailTransporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+        host: 'smtp.mandrillapp.com',
         port: 465,
-        secure: true,
-        auth: {
-          user: process.env.NODEMAILER_USER,
-          pass: process.env.NODEMAILER_PASSWORD
+        auth:{
+          user:"deviego",
+          pass:"md-zx9sQCC4lMeL_Ehm9wGnNw"
+         
         }
+        
       });
 
       const mailDetails = {
         from: data.name,
-        to: String(process.env.NODEMAILER_USER),
+        to: "deviego4@gmail.com",
         subject: `${data.name} - via deviego.dev`,
         text: `
         Name: ${data.name}
         Email: ${data.email}
         ${data.message}`
       };
+     
 
-      await mailTransporter.sendMail(mailDetails);
+      await mailTransporter.sendMail(mailDetails); 
+      console.log(mailDetails)
       return res.status(200).json({ message: 'Email sent' });
-    } catch (err: any) {
+    } catch (error: any) {
       res
         .status(510)
-        .json({ message: `Email not sent - Error: ${err.message}` });
+        .send({ message: `cheguei mais dei ruim: ${error.message}` });
     }
+
   }
-  return res.status(405).json({ message: 'Method not allowed' });
+  return res.status(405).json({ message: 'method not accept' });
 }
