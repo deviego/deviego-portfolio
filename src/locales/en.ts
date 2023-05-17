@@ -32,9 +32,9 @@ export default {
   'pages.about.tagline': 'Learn. Practice. Evolve',
   'pages.about.intro.1': 'This is a brief summary of my career start',
   'pages.about.intro.2':
-    'I started in an unusual way going to walk on weekends at my uncle’s house as customs and watching him program with a yellow pet on the deled notebook (I found out later that it was Scratch) {link} around 2020. I fell in love that I didn’t even sleep that night creating a little game.',
+    'I started in an unusual way going to walk on weekends at my uncle’s house as customs and watching him program with a yellow pet on the deled notebook (I found out later that it was Scratch) {link} around 2019. I fell in love that I didn’t even sleep that night creating a little game.',
   'pages.about.intro.3':
-    'Currently, I am not working in any company, but doing a project on YouTube creating projects and informing other programmers about the market.',
+    'I am currently working together with the company Serpens, making projects and solutions for companies in the market, creating various solutions and platforms.',
   'pages.about.intro.4':
     'Early sportsman practicing <Strong>Swimming for (3 years), karate (8 years), basketball (3 years)</Strong>. When I’m not studying or doing content creator work, I like to go to the gym, chat with friends on Discord, code side projects and help those starting out in the <Strong>Rocketseat</Strong> community,',
   'pages.about.career': 'Career',
@@ -50,7 +50,7 @@ export default {
     "This portfolio. It's open source! and was inspired by my friend Snowey’s",
 
   'pages.projects.zapgpt.description':
-    'Project that I use daily to remove doubts, I joined GPT Chat with WhatsApp.',
+    'Project that I use daily to remove doubts, GPT Chat with WhatsApp.',
 
   'pages.projects.spaces.description':
     'A simple and straightforward todo app to get your tasks done best.',
