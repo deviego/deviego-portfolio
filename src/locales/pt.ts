@@ -34,9 +34,9 @@ export default {
   'pages.about.tagline': ' Aprender. Praticar. Evoluir.',
   'pages.about.intro.1': 'Esse é um breve resumo do meu inicio na carreira ',
   'pages.about.intro.2':
-    'Eu comecei de uma forma meio inusitada indo passear aos fins de semana na casa do meu tio como de costumes e vendo ele programar com um bichinho amarelo no notebook deled (Descobri depois que era o Scratch) {link} por volta de 2020. fiquei apaixonado que nem dormi naquela noite criando um  joguinho.',
+    'Eu comecei de uma forma meio inusitada indo passear aos fins de semana na casa do meu tio como de costumes e vendo ele programar com um bichinho amarelo no notebook dele (Descobri depois que era o Scratch) {link} por volta de 2019. fiquei apaixonado que nem dormi naquela noite criando um  joguinho.',
   'pages.about.intro.3':
-    'Atualmente, não estou trabalhando em nenhuma empresa, mas fazendo um projeto no YouTube criando projetos e informando outros programadores sobre o mercado.',
+    'Atualmente, estou trabalhando em conjunto com a empresa Serpens, fazendo projetos e soluções para empresas do mercado, criando diversas soluções e plataformas.',
   'pages.about.intro.4':
     'Esportista desde cedo praticando <strong>Natação por (3 anos), karate (8 anos), Basquete (3 anos)</strong>. Quando não estou estudando ou fazendo um trabalho de criador de conteúdo, gosto de ir à academia, conversar com amigos no Discord, codar projetos paralelos e ajudar quem está começando na comunidade da <strong>Rocketseat</strong>,' ,
   'pages.about.career': 'Carreira',
@@ -52,7 +52,7 @@ export default {
   'pages.projects.portfolio.description': 'Este portfolio. É open source! e foi inspirado no do meu amigo Snowey.',
 
   'pages.projects.zapgpt.description':
-    'Projeto que uso diariamente para tirar duvidas, juntei o Chat GPT com o WhatsApp.',
+    'Projeto que uso diariamente para tirar duvidas,Chat GPT com WhatsApp.',
 
   'pages.projects.yourproducts.description':
     'Um Sistema com front e back para controle de estoque de um comércio.',
@@ -67,7 +67,7 @@ export default {
     'Jogo Dino do google que aprende a pular os obstáculos sozinho com inteligência artificial.',
 
   'pages.projects.alert.description':
-    'Alerta de aniversariante para empresas, verifica diariamente se há aniversariante e se houver ele envia um email para o superior da empresa.',
+    'Alerta de aniversariante para empresas, verifica diariamente se há aniversariante e se houver ele envia um email para o superior da empresa, projeto feito para a empresa O Boticário.',
   'pages.projects.expense.description':
     'Uma interface que permite você acompanhar os gastos no detalinho, e tenha um controle da sua vida financeira',
 
