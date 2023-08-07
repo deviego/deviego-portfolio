@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { RiCommandLine } from 'react-icons/ri';
-import { styled } from '../../../stitches.config';
+import { motion } from 'framer-motion'
+import { RiCommandLine } from 'react-icons/ri'
+import { styled } from '../../../stitches.config'
 
 export const Header = styled('header', {
   display: 'flex',
@@ -15,7 +15,7 @@ export const Header = styled('header', {
   zIndex: 3,
   marginTop: '0.75rem',
   '@bp2': { marginTop: '0' }
-});
+})
 
 export const List = styled('ul', {
   margin: '0',
@@ -25,7 +25,7 @@ export const List = styled('ul', {
   position: 'relative',
   top: '0.3125rem',
   '@bp1': { justifyContent: 'space-around' }
-});
+})
 
 export const CmdButton = styled('button', {
   display: 'flex',
@@ -39,12 +39,12 @@ export const CmdButton = styled('button', {
   padding: '0.35rem',
   transition: 'background $duration ease-in-out',
   '&:hover': { background: '$hover' }
-});
+})
 
 export const CmdIcon = styled(RiCommandLine, {
   width: '1.5rem',
   height: '1.5rem'
-});
+})
 
 export const LogoButton = styled('a', {
   appearance: 'none',
@@ -63,7 +63,7 @@ export const LogoButton = styled('a', {
   textDecoration: 'none',
   marginLeft: '0.75rem',
   fontFamily: '$heading'
-});
+})
 
 export const Nav = styled('nav', {
   textAlign: 'center',
@@ -72,20 +72,20 @@ export const Nav = styled('nav', {
   flexBasis: '100%',
   '@bp2': { order: 0, flexBasis: 'initial' },
   '@bp3': { overflowX: 'scroll', overflowY: 'hidden' }
-});
+})
 
 export const Aside = styled('div', {
   display: 'flex',
   alignItems: 'center',
   paddingRight: '0.75rem',
   marginLeft: 'auto'
-});
+})
 
 export const Anchor = styled('a', {
   border: 0,
   position: 'relative',
   '&:hover, &:focus': { opacity: 1 }
-});
+})
 
 export const NavContainer = styled(motion.span, {
   color: '$secondary',
@@ -114,7 +114,7 @@ export const NavContainer = styled(motion.span, {
     opacity: 0,
     transition: 'opacity $duration ease-in-out'
   }
-});
+})
 
 export const Hover = styled(motion.span, {
   position: 'absolute',
@@ -125,4 +125,4 @@ export const Hover = styled(motion.span, {
   padding: 20,
   borderRadius: '$borderRadius',
   zIndex: -1
-});
+})

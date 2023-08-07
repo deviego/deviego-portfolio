@@ -1,16 +1,14 @@
-import Head from 'next/head';
-import { Base } from '../../components/Base';
-import { AllProjects } from '../../components/containers/Projects/AllProjects';
-import { FeaturedProjects } from '../../components/containers/Projects/FeaturedProjects';
-import { projects } from '../../data/projects';
-import { getLocaleProps, useI18n } from '../../locales';
-import { getTotalProjects } from '../../utils/getTotalProjects';
-import { stripHtml } from '../../utils/stripHtml';
+import Head from 'next/head'
+import { Base } from '../../components/Base'
+import { AllProjects } from '../../components/containers/Projects/AllProjects'
+import { FeaturedProjects } from '../../components/containers/Projects/FeaturedProjects'
+import { getLocaleProps, useI18n } from '../../locales'
+import { stripHtml } from '../../utils/stripHtml'
 
 interface ProjectsProps {
-  tagline: string;
-  primaryColor: string;
-  secondaryColor: string;
+  tagline: string
+  primaryColor: string
+  secondaryColor: string
 }
 
 export const getStaticProps = getLocaleProps(() => {
@@ -18,20 +16,18 @@ export const getStaticProps = getLocaleProps(() => {
     tagline: 'Apps. Libs. Open Source.',
     primaryColor: 'cyan',
     secondaryColor: 'green'
-  };
+  }
 
-  return { props: meta };
-});
+  return { props: meta }
+})
 
-export default function Projects({
+export default function Projects ({
   primaryColor,
   secondaryColor,
   tagline
 }: ProjectsProps) {
-  const totalProjects = getTotalProjects(projects);
-
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.projects');
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.projects')
 
   return (
     <Base
@@ -82,5 +78,5 @@ export default function Projects({
       <h2>{t('all')}</h2>
       <AllProjects />
     </Base>
-  );
+  )
 }

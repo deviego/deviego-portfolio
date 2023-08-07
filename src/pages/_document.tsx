@@ -1,15 +1,15 @@
-import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { getCssText } from '../../stitches.config';
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { getCssText } from '../../stitches.config'
 
 export default class MyDocument extends Document {
-  render() {
-    const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang;
+  render () {
+    const lang = this.props.__NEXT_DATA__.props.pageProps?.post?.lang
 
     return (
-      <Html lang={lang ? lang : 'en-US'}>
+      <Html lang={lang || 'en-US'}>
         <Head>
           <meta charSet='utf-8' />
-          <meta content='Diego 
+          <meta content='Diego
           Domingues' name='author' />
           <meta property='og:type' content='website' />
           <meta content='summary_large_image' name='twitter:card' />
@@ -29,6 +29,6 @@ export default class MyDocument extends Document {
         <Main />
         <NextScript />
       </Html>
-    );
+    )
   }
 }

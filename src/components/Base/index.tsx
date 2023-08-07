@@ -1,17 +1,17 @@
-import { Footer } from '../Footer';
-import { Navbar } from '../Navbar';
-import { PostContainer, PostContent, PostMain } from '../styled/Post';
-import { GradientTitle, Wrapper } from './styles';
+import { Footer } from '../Footer'
+import { Navbar } from '../Navbar'
+import { PostContainer, PostContent, PostMain } from '../styled/Post'
+import { GradientTitle, Wrapper } from './styles'
 
 interface BaseProps {
-  children: React.ReactNode;
-  title: string;
-  tagline: string;
-  primaryColor: string;
-  secondaryColor: string;
+  children: React.ReactNode
+  title: string
+  tagline: string
+  primaryColor: string
+  secondaryColor: string
 }
 
-export function Base({
+export function Base ({
   children,
   primaryColor,
   secondaryColor,
@@ -41,7 +41,7 @@ export function Base({
               );`
               }}
             >
-              {tagline ? tagline : title}
+              {tagline || title}
             </GradientTitle>
             {children}
           </PostContainer>
@@ -49,5 +49,5 @@ export function Base({
       </PostMain>
       <Footer />
     </Wrapper>
-  );
+  )
 }

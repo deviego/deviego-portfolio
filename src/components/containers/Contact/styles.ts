@@ -1,23 +1,23 @@
-import { styled } from '../../../../stitches.config';
+import { styled } from '../../../../stitches.config'
 
 export const Form = styled('form', {
   display: 'flex',
   flexDirection: 'column',
   maxWidth: '400px'
-});
+})
 
 export const FormGroup = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   marginBottom: '0.625rem'
-});
+})
 
 export const Label = styled('label', {
   color: '$secondary',
   textTransform: 'uppercase',
   fontSize: '0.75rem',
   fontWeight: '500'
-});
+})
 
 export const Input = styled('input', {
   color: '$primary',
@@ -28,7 +28,7 @@ export const Input = styled('input', {
   height: '2rem',
   fontSize: '0.95rem',
   '&:focus': { outline: 'none', borderColor: '$purple' }
-});
+})
 
 export const Textarea = styled('textarea', {
   color: '$primary',
@@ -38,7 +38,7 @@ export const Textarea = styled('textarea', {
   padding: '0.625rem',
   fontSize: '0.95rem',
   '&:focus': { outline: 'none', borderColor: '$purple' }
-});
+})
 
 export const Button = styled('button', {
   color: '$background',
@@ -60,4 +60,4 @@ export const Button = styled('button', {
     color: '$purple',
     outline: 'none'
   }
-});
+})

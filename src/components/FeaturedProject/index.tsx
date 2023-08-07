@@ -1,6 +1,7 @@
-import Lottie, { LottieRefCurrentProps } from 'lottie-react';
-import { Dispatch, SetStateAction, useRef } from 'react';
-import type { Project } from '../../data/projects';
+/* eslint-disable @typescript-eslint/no-var-requires */
+import Lottie, { type LottieRefCurrentProps } from 'lottie-react'
+import { type Dispatch, type SetStateAction, useRef } from 'react'
+import type { Project } from '../../data/projects'
 import {
   Body,
   Description,
@@ -8,30 +9,30 @@ import {
   Project as StyledProject,
   Stats,
   Title
-} from './styles';
+} from './styles'
 
 interface FeaturedProjectProps {
-  project: Project;
-  onHover: Dispatch<SetStateAction<string>>;
-  isHovered: boolean;
+  project: Project
+  onHover: Dispatch<SetStateAction<string>>
+  isHovered: boolean
 }
 
-export function FeaturedProject({
+export function FeaturedProject ({
   project,
   onHover,
   isHovered
 }: FeaturedProjectProps) {
-  const { title, url, description, iconName, stats } = project;
+  const { title, url, description, iconName, stats } = project
 
-  const icon = require(`../../../public/static/icons/${iconName}.json`);
-  const iconRef = useRef<LottieRefCurrentProps | null>(null);
+  const icon = require(`../../../public/static/icons/${iconName ?? ''}.json`)
+  const iconRef = useRef<LottieRefCurrentProps | null>(null)
 
   return (
     <StyledProject
       href={url}
       target='_blank'
-      onHoverStart={() => onHover(title)}
-      onHoverEnd={() => onHover('')}
+      onHoverStart={() => { onHover(title) }}
+      onHoverEnd={() => { onHover('') }}
       data-testid='featuredProject'
       onMouseEnter={() => iconRef.current?.play()}
       onMouseLeave={() => iconRef.current?.stop()}
@@ -57,5 +58,5 @@ export function FeaturedProject({
         />
       )}
     </StyledProject>
-  );
+  )
 }

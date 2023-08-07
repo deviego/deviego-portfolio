@@ -1,14 +1,14 @@
-export type Projects = {
-  year?: string;
-  projects: Project[];
-}[];
+export type Projects = Array<{
+  year?: string
+  projects: Project[]
+}>
 
 export interface Project {
-  title: string;
-  url: string;
-  description?: string;
-  iconName?: string;
-  stats?: string;
+  title: string
+  url: string
+  description?: string
+  iconName?: string
+  stats?: string
 }
 
 export const projects: Projects = [
@@ -43,8 +43,8 @@ export const projects: Projects = [
         url: 'https://github.com/deviego/Next-trpc-zod-StudyandPractice-',
         description: 'projeto com de feedbacks com o melhor do Typescript',
         iconName: 'assignment'
-      },
-      
+      }
+
     ]
   }
-];
+]

@@ -1,23 +1,23 @@
-import Head from 'next/head';
-import { Base } from '../../components/Base';
-import { Career } from '../../components/containers/About/Career';
-import { Intro } from '../../components/containers/About/Intro';
-import { getLocaleProps, useI18n } from '../../locales';
-import { stripHtml } from '../../utils/stripHtml';
+import Head from 'next/head'
+import { Base } from '../../components/Base'
+import { Career } from '../../components/containers/About/Career'
+import { Intro } from '../../components/containers/About/Intro'
+import { getLocaleProps, useI18n } from '../../locales'
+import { stripHtml } from '../../utils/stripHtml'
 
 interface AboutProps {
-  imagePath: string;
-  primaryColor: string;
-  secondaryColor: string;
+  imagePath: string
+  primaryColor: string
+  secondaryColor: string
 }
 
-export default function About({
+export default function About ({
   imagePath,
   primaryColor,
   secondaryColor
 }: AboutProps) {
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.about');
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.about')
   return (
     <Base
       tagline={t('tagline')}
@@ -25,13 +25,12 @@ export default function About({
       primaryColor={primaryColor}
       secondaryColor={secondaryColor}
     >
-      
+
        <h2>{t('bio')}</h2>
       <blockquote>
         <p>{t('description')}</p>
       </blockquote>
 
-      
       <Intro />
       <Head>
         <title>{t('title')}</title>
@@ -44,10 +43,9 @@ export default function About({
 
       <h2>{t('career')}</h2>
 
-     
       <Career />
     </Base>
-  );
+  )
 }
 
 export const getStaticProps = getLocaleProps(() => {
@@ -55,7 +53,7 @@ export const getStaticProps = getLocaleProps(() => {
     imagePath: '/static/imagePaths/snowye-bw.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple'
-  };
+  }
 
-  return { props: meta };
-});
+  return { props: meta }
+})

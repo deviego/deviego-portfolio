@@ -1,8 +1,8 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import Head from 'next/head';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Base } from '../../components/Base';
+import { zodResolver } from '@hookform/resolvers/zod'
+import Head from 'next/head'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { Base } from '../../components/Base'
 import {
   Button,
   Form,
@@ -10,28 +10,28 @@ import {
   Input,
   Label,
   Textarea
-} from '../../components/containers/Contact/styles';
-import { Toast } from '../../components/Toast';
-import { api } from '../../lib/api';
-import { getLocaleProps, useI18n } from '../../locales';
-import { emailSchema, IEmailInputs } from '../../schemas/Email';
-import { stripHtml } from '../../utils/stripHtml';
+} from '../../components/containers/Contact/styles'
+import { Toast } from '../../components/Toast'
+import { api } from '../../lib/api'
+import { getLocaleProps, useI18n } from '../../locales'
+import { emailSchema, type IEmailInputs } from '../../schemas/Email'
+import { stripHtml } from '../../utils/stripHtml'
 
 interface ContactProps {
-  primaryColor: string;
-  secondaryColor: string;
+  primaryColor: string
+  secondaryColor: string
 }
 
-export default function Contact({
+export default function Contact ({
   primaryColor,
   secondaryColor
 }: ContactProps) {
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.contact');
-  
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const [showToast, setShowToast] = useState(false);
-  
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.contact')
+
+  const [isEmailSent, setIsEmailSent] = useState(false)
+  const [showToast, setShowToast] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -39,25 +39,25 @@ export default function Contact({
     formState: { errors }
   } = useForm<IEmailInputs>({
     resolver: zodResolver(emailSchema)
-  });
-  
-  async function onSubmit(data: IEmailInputs) {
+  })
+
+  async function onSubmit (data: IEmailInputs) {
     await api.post('/email', {
       name: data.name,
       subject: data.message,
-      toEmail: data.email,
+      toEmail: data.email
     })
-    .then(() => {
-      setIsEmailSent(true);
-      setShowToast(true);
-    })
-    .finally(() => {
-      setIsEmailSent(false);
-      reset();
-    });
+      .then(() => {
+        setIsEmailSent(true)
+        setShowToast(true)
+      })
+      .finally(() => {
+        setIsEmailSent(false)
+        reset()
+      })
   }
-    
-    return (
+
+  return (
       <Base
       primaryColor={primaryColor}
       secondaryColor={secondaryColor}
@@ -71,7 +71,7 @@ export default function Contact({
       <meta content={stripHtml(t('description'))} property='og:description' />
       <meta content='https://github.dev/contact' property='og:url' />
       </Head>
-      
+
       <div>
       <p dangerouslySetInnerHTML={{ __html: 'description' }} />
       <h2>{t('email')}</h2>
@@ -99,13 +99,13 @@ export default function Contact({
       <Button type='submit'>Send</Button>
       </FormGroup>
       </Form>
-      
+
       <Toast
       title={isEmailSent ? t('toast.success.title') : t('toast.fail.title')}
       description={
         isEmailSent
-        ? t('toast.success.description')
-        : t('toast.fail.description')
+          ? t('toast.success.description')
+          : t('toast.fail.description')
       }
       isSuccess={isEmailSent}
       showToast={showToast}
@@ -113,16 +113,14 @@ export default function Contact({
       />
       </div>
       </Base>
-      );
-    }
-  
-  
-  export const getStaticProps = getLocaleProps(() => {
-    const meta = {
-      primaryColor: 'purple',
-      secondaryColor: 'cyan'
-    };
-    
-    return { props: meta };
-  });
-  
+  )
+}
+
+export const getStaticProps = getLocaleProps(() => {
+  const meta = {
+    primaryColor: 'purple',
+    secondaryColor: 'cyan'
+  }
+
+  return { props: meta }
+})

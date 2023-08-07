@@ -1,7 +1,7 @@
-import { PropsWithChildren } from 'react';
-import { Footer } from '../Footer';
-import { Navbar } from '../Navbar';
-import { Wrapper } from './style';
+import { type PropsWithChildren } from 'react'
+import { Footer } from '../Footer'
+import { Navbar } from '../Navbar'
+import { Wrapper } from './style'
 
 export const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -10,5 +10,5 @@ export const Layout = ({ children }: PropsWithChildren) => {
       {children}
       <Footer />
     </Wrapper>
-  );
-};
+  )
+}

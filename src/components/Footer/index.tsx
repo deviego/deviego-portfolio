@@ -1,19 +1,19 @@
-import Link from 'next/link';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FaInstagram } from 'react-icons/fa';
-import { RiMailLine } from 'react-icons/ri';
-import { Anchor, Container, Title } from './styles';
+import Link from 'next/link'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { FaInstagram } from 'react-icons/fa'
+import { RiMailLine } from 'react-icons/ri'
+import { Anchor, Container, Title } from './styles'
 
-interface Link {
-  title: string;
-  url: string;
-  icon: JSX.Element;
-  variant: Variants;
+interface ILink {
+  title: string
+  url: string
+  icon: JSX.Element
+  variant: Variants
 }
 
-type Variants = 'instagram' | 'email' | 'github' | 'linkedin';
+type Variants = 'instagram' | 'email' | 'github' | 'linkedin'
 
-const links: Link[] = [
+const links: ILink[] = [
   {
     title: 'Email',
     url: '/contact',
@@ -38,26 +38,26 @@ const links: Link[] = [
     icon: <FaInstagram />,
     variant: 'instagram'
   }
-];
+]
 
-export function Footer() {
+export function Footer () {
   return (
     <Container>
       {links.map((link, index) => (
         <LinkComponent key={index} link={link} index={index} />
       ))}
     </Container>
-  );
+  )
 }
 
-const LinkComponent = ({ link, index }: { link: Link; index: number }) => {
+const LinkComponent = ({ link, index }: { link: ILink, index: number }) => {
   if (link.url.startsWith('http')) {
     return (
       <Anchor key={index} href={link.url} target='_blank' type={link.variant}>
         <Title>{link.title}</Title>
         {link.icon}
       </Anchor>
-    );
+    )
   }
 
   return (
@@ -67,5 +67,5 @@ const LinkComponent = ({ link, index }: { link: Link; index: number }) => {
         {link.icon}
       </Anchor>
     </Link>
-  );
-};
+  )
+}

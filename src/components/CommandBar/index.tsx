@@ -1,20 +1,20 @@
-import type { Action } from 'kbar';
-import { KBarPortal, KBarProvider, KBarResults, useMatches } from 'kbar';
+import type { Action } from 'kbar'
+import { KBarPortal, KBarProvider, KBarResults, useMatches } from 'kbar'
 import Lottie, {
-  LottieComponentProps,
-  LottieRefCurrentProps
-} from 'lottie-react';
-import { useRouter } from 'next/router';
+  type LottieComponentProps,
+  type LottieRefCurrentProps
+} from 'lottie-react'
+import { useRouter } from 'next/router'
 import {
   forwardRef,
-  PropsWithChildren,
-  ReactElement,
-  Ref,
+  type PropsWithChildren,
+  type ReactElement,
+  type Ref,
   useRef,
   useState
-} from 'react';
-import { RiGithubLine, RiInstagramLine, RiLinkedinLine } from 'react-icons/ri';
-import { Toast } from '../Toast';
+} from 'react'
+import { RiGithubLine, RiInstagramLine, RiLinkedinLine } from 'react-icons/ri'
+import { Toast } from '../Toast'
 import {
   ActionRow,
   Animator,
@@ -25,36 +25,36 @@ import {
   Search,
   Shortcut,
   StyledAction
-} from './styles';
+} from './styles'
 
-import aboutIcon from '../../../public/static/icons/about.json';
-import copyLinkIcon from '../../../public/static/icons/copy-link.json';
-import emailIcon from '../../../public/static/icons/email.json';
-import homeIcon from '../../../public/static/icons/home.json';
-import projectsIcon from '../../../public/static/icons/projects.json';
-import sourceIcon from '../../../public/static/icons/source.json';
-import { useI18n } from '../../locales';
+import aboutIcon from '../../../public/static/icons/about.json'
+import copyLinkIcon from '../../../public/static/icons/copy-link.json'
+import emailIcon from '../../../public/static/icons/email.json'
+import homeIcon from '../../../public/static/icons/home.json'
+import projectsIcon from '../../../public/static/icons/projects.json'
+import sourceIcon from '../../../public/static/icons/source.json'
+import { useI18n } from '../../locales'
 
-export default function CommandBar({ children }: PropsWithChildren) {
-  const copyLinkRef = useRef<LottieRefCurrentProps>(null);
-  const emailRef = useRef<LottieRefCurrentProps>(null);
-  const sourceRef = useRef<LottieRefCurrentProps>(null);
-  const homeRef = useRef<LottieRefCurrentProps>(null);
-  const aboutRef = useRef<LottieRefCurrentProps>(null);
-  const projectsRef = useRef<LottieRefCurrentProps>(null);
+export default function CommandBar ({ children }: PropsWithChildren) {
+  const copyLinkRef = useRef<LottieRefCurrentProps>(null)
+  const emailRef = useRef<LottieRefCurrentProps>(null)
+  const sourceRef = useRef<LottieRefCurrentProps>(null)
+  const homeRef = useRef<LottieRefCurrentProps>(null)
+  const aboutRef = useRef<LottieRefCurrentProps>(null)
+  const projectsRef = useRef<LottieRefCurrentProps>(null)
 
-  const router = useRouter();
-  const [showToast, setShowToast] = useState(false);
+  const router = useRouter()
+  const [showToast, setShowToast] = useState(false)
 
-  const { scopedT } = useI18n();
-  const t = scopedT('common.kbar');
+  const { scopedT } = useI18n()
+  const t = scopedT('common.kbar')
 
-  const copyUrl = () => {
-    navigator.clipboard.writeText(window.location.href);
-    setShowToast(true);
-  };
+  const copyUrl = async () => {
+    await navigator.clipboard.writeText(window.location.href)
+    setShowToast(true)
+  }
 
-  const iconStyle = { width: 24, height: 24 };
+  const iconStyle = { width: 24, height: 24 }
 
   const actions = [
     {
@@ -80,7 +80,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       shortcut: ['e'],
       keywords: 'send-email',
       section: t('sections.general'),
-      perform: () => router.push('/contact'),
+      perform: async () => await router.push('/contact'),
       icon: (
         <Lottie
           lottieRef={emailRef}
@@ -115,7 +115,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       shortcut: ['g', 'h'],
       keywords: 'go-home',
       section: t('sections.goto'),
-      perform: () => router.push('/'),
+      perform: async () => await router.push('/'),
       icon: (
         <Lottie
           lottieRef={homeRef}
@@ -132,7 +132,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       shortcut: ['g', 'a'],
       keywords: 'go-about',
       section: t('sections.goto'),
-      perform: () => router.push('/about'),
+      perform: async () => await router.push('/about'),
       icon: (
         <Lottie
           lottieRef={aboutRef}
@@ -149,7 +149,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
       shortcut: ['g', 'p'],
       keywords: 'go-projects',
       section: t('sections.goto'),
-      perform: () => router.push('/projects'),
+      perform: async () => await router.push('/projects'),
       icon: (
         <Lottie
           lottieRef={projectsRef}
@@ -189,7 +189,7 @@ export default function CommandBar({ children }: PropsWithChildren) {
         window.open('https://www.instagram.com/dev.iego', '_blank'),
       icon: <RiInstagramLine />
     }
-  ];
+  ]
 
   return (
     <>
@@ -214,40 +214,42 @@ export default function CommandBar({ children }: PropsWithChildren) {
         setShowToast={setShowToast}
       />
     </>
-  );
+  )
 }
-function RenderResults() {
-  const { results } = useMatches();
+function RenderResults () {
+  const { results } = useMatches()
 
   return (
     <KBarResults
       items={results}
       onRender={({ item, active }: any) =>
-        typeof item === 'string' ? (
+        typeof item === 'string'
+          ? (
           <GroupName>{item}</GroupName>
-        ) : (
+            )
+          : (
           <ResultItem action={item} active={active} />
-        )
+            )
       }
     />
-  );
+  )
 }
 
 interface TAction extends Action {
-  icon: ReactElement<LottieComponentProps>;
+  icon: ReactElement<LottieComponentProps>
 }
 
 interface ResultItemProps {
-  action: TAction;
-  active: boolean;
+  action: TAction
+  active: boolean
 }
 
 const ResultItem = forwardRef(
   ({ action, active }: ResultItemProps, ref: Ref<HTMLDivElement>) => {
     if (active) {
-      action.icon.props.lottieRef?.current?.play();
+      action.icon.props.lottieRef?.current?.play()
     } else {
-      action.icon.props.lottieRef?.current?.stop();
+      action.icon.props.lottieRef?.current?.stop()
     }
     return (
       <ResultStyle ref={ref} active={active}>
@@ -265,8 +267,8 @@ const ResultItem = forwardRef(
           </Shortcut>
         )}
       </ResultStyle>
-    );
+    )
   }
-);
+)
 
-ResultItem.displayName = 'ResultItem';
+ResultItem.displayName = 'ResultItem'

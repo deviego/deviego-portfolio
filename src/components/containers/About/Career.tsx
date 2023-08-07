@@ -1,14 +1,14 @@
-import { format, parseISO } from 'date-fns';
-import { jobs } from '../../../data/career';
-import { getDurationString } from '../../../utils/getDurationString';
+import { format, parseISO } from 'date-fns'
+import { jobs } from '../../../data/career'
+import { getDurationString } from '../../../utils/getDurationString'
 
 export interface Job {
-  jobTitle: string;
-  company: string;
-  companyUrl: string;
-  startDate: string;
-  endDate?: string;
-  location: string;
+  jobTitle: string
+  company: string
+  companyUrl: string
+  startDate: string
+  endDate?: string
+  location: string
 }
 
 export const Career = () => {
@@ -40,5 +40,5 @@ export const Career = () => {
         )
       )}
     </>
-  );
-};
+  )
+}

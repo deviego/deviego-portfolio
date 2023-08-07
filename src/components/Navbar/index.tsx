@@ -1,9 +1,9 @@
-import { useKBar } from 'kbar';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { useI18n } from '../../locales';
+import { useKBar } from 'kbar'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { useI18n } from '../../locales'
 import {
   Anchor,
   Aside,
@@ -15,16 +15,16 @@ import {
   LogoButton,
   Nav,
   NavContainer
-} from './styles';
+} from './styles'
 
-export const pages = ['about', 'projects', 'contact'] as const;
+export const pages = ['about', 'projects', 'contact'] as const
 
-export function Navbar() {
-  const { asPath } = useRouter();
-  const [hovered, setHovered] = useState('');
-  const { query } = useKBar();
-  const { scopedT } = useI18n();
-  const t = scopedT('common.navbar');
+export function Navbar () {
+  const { asPath } = useRouter()
+  const [hovered, setHovered] = useState('')
+  const { query } = useKBar()
+  const { scopedT } = useI18n()
+  const t = scopedT('common.navbar')
 
   return (
     <Header>
@@ -41,16 +41,16 @@ export function Navbar() {
       <Nav>
         <List>
           {pages.map(page => {
-            const path = `/${page.toLowerCase()}`;
-            const isHovered = hovered === page;
+            const path = `/${page.toLowerCase()}`
+            const isHovered = hovered === page
 
             return (
               <li key={page}>
                 <Link href={path} passHref>
                   <Anchor>
                     <NavContainer
-                      onHoverStart={() => setHovered(page)}
-                      onHoverEnd={() => setHovered('')}
+                      onHoverStart={() => { setHovered(page) }}
+                      onHoverEnd={() => { setHovered('') }}
                       css={
                         asPath === path
                           ? {
@@ -73,7 +73,7 @@ export function Navbar() {
                   </Anchor>
                 </Link>
               </li>
-            );
+            )
           })}
         </List>
       </Nav>
@@ -83,5 +83,5 @@ export function Navbar() {
         </CmdButton>
       </Aside>
     </Header>
-  );
+  )
 }

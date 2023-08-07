@@ -1,29 +1,29 @@
-import { useState } from 'react';
-import { useI18n } from '../../../locales';
-import { FeaturedProject } from '../../FeaturedProject';
-import { StyledFeaturedProjects } from './styles';
+import { useState } from 'react'
+import { useI18n } from '../../../locales'
+import { FeaturedProject } from '../../FeaturedProject'
+import { StyledFeaturedProjects } from './styles'
 
-type Projects = {
-  year: string;
-  projects: Project[];
-}[];
+type Projects = Array<{
+  year: string
+  projects: Project[]
+}>
 
 interface Project {
-  title: string;
-  url: string;
-  description?: string;
-  iconName?: string;
-  stats?: string;
+  title: string
+  url: string
+  description?: string
+  iconName?: string
+  stats?: string
 }
 
 interface FeaturedProjectsProps {
-  featured: string[];
+  featured: string[]
 }
 
 export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
-  const [isHovered, setIsHovered] = useState('');
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.projects');
+  const [isHovered, setIsHovered] = useState('')
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.projects')
 
   const projects: Projects = [
     {
@@ -79,7 +79,7 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
         }
       ]
     }
-  ];
+  ]
 
   return (
     <StyledFeaturedProjects>
@@ -87,7 +87,7 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
         .map(item => {
           return item.projects.filter(project =>
             featured.includes(project.title)
-          );
+          )
         })
         .filter(item => item.length > 0 && item)
         .flat()
@@ -100,5 +100,5 @@ export const FeaturedProjects = ({ featured }: FeaturedProjectsProps) => {
           />
         ))}
     </StyledFeaturedProjects>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-import * as ToastPrimitive from '@radix-ui/react-toast';
-import { ReactNode } from 'react';
-import { IconBaseProps } from 'react-icons';
-import { RiCheckboxCircleFill, RiErrorWarningFill } from 'react-icons/ri';
+import * as ToastPrimitive from '@radix-ui/react-toast'
+import { type ReactNode } from 'react'
+import { type IconBaseProps } from 'react-icons'
+import { RiCheckboxCircleFill, RiErrorWarningFill } from 'react-icons/ri'
 import {
   Close,
   Description,
@@ -9,18 +9,18 @@ import {
   Root,
   Title,
   Viewport
-} from './styles';
+} from './styles'
 
 interface ToastProps {
-  title: string;
-  description: string;
-  isSuccess: boolean;
-  showToast: boolean;
-  setShowToast: (showToast: boolean) => void;
-  children?: ReactNode;
+  title: string
+  description: string
+  isSuccess: boolean
+  showToast: boolean
+  setShowToast: (showToast: boolean) => void
+  children?: ReactNode
 }
 
-export function Toast({
+export function Toast ({
   title,
   description,
   isSuccess,
@@ -28,14 +28,16 @@ export function Toast({
   setShowToast,
   children
 }: ToastProps) {
-  const iconColor = isSuccess ? '#4cb782' : '#b75c4c';
+  const iconColor = isSuccess ? '#4cb782' : '#b75c4c'
   const Icon = (props: IconBaseProps) => {
-    return isSuccess ? (
+    return isSuccess
+      ? (
       <RiCheckboxCircleFill {...props} />
-    ) : (
+        )
+      : (
       <RiErrorWarningFill {...props} />
-    );
-  };
+        )
+  }
 
   return (
     <ToastPrimitive.Provider>
@@ -54,5 +56,5 @@ export function Toast({
       </Root>
       <Viewport />
     </ToastPrimitive.Provider>
-  );
+  )
 }

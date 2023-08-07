@@ -1,4 +1,4 @@
-import { styled } from '../../../stitches.config';
+import { styled } from '../../../stitches.config'
 
 export const Container = styled('footer', {
   background: '$background',
@@ -6,7 +6,7 @@ export const Container = styled('footer', {
   alignItems: 'center',
   justifyContent: 'center',
   padding: '1.25rem 0'
-});
+})
 
 export const Anchor = styled('a', {
   color: '$secondary',
@@ -70,9 +70,9 @@ export const Anchor = styled('a', {
       }
     }
   }
-});
+})
 
 export const Title = styled('span', {
   display: 'none',
   '@bp2': { display: 'block' }
-});
+})

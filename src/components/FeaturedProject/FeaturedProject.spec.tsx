@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
-import { describe } from 'vitest';
-import { FeaturedProject } from '.';
-import { Project } from '../../data/projects';
+import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
+import { describe } from 'vitest'
+import { FeaturedProject } from '.'
+import { type Project } from '../../data/projects'
 
 const projectMock: Project = {
   title: 'Mock Project',
@@ -10,23 +10,23 @@ const projectMock: Project = {
   url: '/test',
   iconName: 'book',
   stats: '400k+ Sales'
-};
+}
 
 describe('<FeaturedProject />', () => {
   it('should render properly', () => {
     const { container } = render(
       <FeaturedProject onHover={() => {}} isHovered project={projectMock} />
-    );
-    expect(container).toBeInTheDocument();
-  });
+    )
+    expect(container).toBeInTheDocument()
+  })
 
   it('should render props correctly', () => {
     const { getByRole, getByText } = render(
       <FeaturedProject onHover={() => {}} isHovered project={projectMock} />
-    );
+    )
 
-    expect(getByText('Mock Project')).toBeInTheDocument();
-    expect(getByText('This is a mocked project')).toBeInTheDocument();
-    expect(getByRole('link')).toHaveAttribute('href', '/test');
-  });
-});
+    expect(getByText('Mock Project')).toBeInTheDocument()
+    expect(getByText('This is a mocked project')).toBeInTheDocument()
+    expect(getByRole('link')).toHaveAttribute('href', '/test')
+  })
+})

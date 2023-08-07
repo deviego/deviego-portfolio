@@ -76,7 +76,7 @@ export default {
   'pages.contact.title': 'Contact | Diego Domingues',
   'pages.contact.tagline': 'Email me. As in the good old days.',
   'pages.contact.description':
-    "can be a feedback, an invitation to a call, some vacancy or something. <br><Strong>I love chatting with software engineers, developers in general, students and creators. It will be a pleasure to exchange an idea.",
+    'can be a feedback, an invitation to a call, some vacancy or something. <br><Strong>I love chatting with software engineers, developers in general, students and creators. It will be a pleasure to exchange an idea.',
   'pages.contact.email': 'Send an email',
 
   'pages.contact.toast.success.title': 'Email sent :D',
@@ -92,4 +92,4 @@ export default {
   'pages.contact.labels.message': 'message',
   'pages.contact.placeholders.message': 'Your message here :P',
   'pages.contact.send': 'Send'
-} as const;
+} as const

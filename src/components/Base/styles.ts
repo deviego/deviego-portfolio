@@ -1,4 +1,4 @@
-import { styled } from '../../../stitches.config';
+import { styled } from '../../../stitches.config'
 
 export const GradientTitle = styled('h1', {
   backgroundSize: '100%',
@@ -8,7 +8,7 @@ export const GradientTitle = styled('h1', {
   WebkitTextFillColor: 'transparent',
   MozTextFillColor: 'transparent',
   WebkitBoxDecorationBreak: 'clone'
-});
+})
 
 export const Wrapper = styled('div', {
   display: 'flex',
@@ -16,4 +16,4 @@ export const Wrapper = styled('div', {
   minHeight: '100vh',
   position: 'relative',
   zIndex: 0
-});
+})

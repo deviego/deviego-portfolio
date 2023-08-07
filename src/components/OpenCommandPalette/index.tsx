@@ -1,29 +1,29 @@
-import { useKBar } from 'kbar';
-import { useEffect, useState } from 'react';
-import { useI18n } from '../../locales';
-import { Button } from '../styled/Button';
+import { useKBar } from 'kbar'
+import { useEffect, useState } from 'react'
+import { useI18n } from '../../locales'
+import { Button } from '../styled/Button'
 
-export function OpenCommandPalette() {
-  const { query } = useKBar();
-  const [mounted, setMounted] = useState(false);
-  const { scopedT } = useI18n();
-  const t = scopedT('common.kbar.start');
+export function OpenCommandPalette () {
+  const { query } = useKBar()
+  const [mounted, setMounted] = useState(false)
+  const { scopedT } = useI18n()
+  const t = scopedT('common.kbar.start')
 
   // This is a hack to make sure the command palette is mounted on render.
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (mounted) {
-    const isMac = /(Mac)/i.test(navigator.userAgent);
-    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+    const isMac = /(Mac)/i.test(navigator.userAgent)
+    const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent)
 
     if (isMobile) {
       return (
         <Button type='button' onClick={query.toggle}>
           {t('mobile')}
         </Button>
-      );
+      )
     }
     if (isMac) {
       return (
@@ -36,10 +36,10 @@ export function OpenCommandPalette() {
             )
           })}
         </Button>
-      );
+      )
     }
 
-    //Common cases (Windows, Linux)
+    // Common cases (Windows, Linux)
     return (
       <Button type='button' onClick={query.toggle}>
         {t('pc', {
@@ -50,7 +50,7 @@ export function OpenCommandPalette() {
           )
         })}
       </Button>
-    );
+    )
   }
-  return null;
+  return null
 }
