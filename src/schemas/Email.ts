@@ -6,8 +6,4 @@ export const emailSchema = z.object({
   message: z.string()
 });
 
-export interface IEmailInputs {
-  name: string;
-  email: string;
-  message: string;
-}
+export type IEmailInputs = z.infer<typeof emailSchema>

@@ -1,46 +1,40 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import { IEmailInputs } from '../../schemas/Email';
+import sgMail from '@sendgrid/mail'
+
+const { SG_API_KEY, EMAIL_SENDER } = process.env
+sgMail.setApiKey(SG_API_KEY!)
+
+interface IRequest {
+  name: string
+  toEmail: string
+  subject: string
+}
 
 export default async function onSendMail(
   req: NextApiRequest,
   res: NextApiResponse
-) {
-  if (req.method === 'POST') {
-    try {
-      const data: IEmailInputs = req.body;
+  ) {
+  const { body } = req;
 
-      const mailTransporter = nodemailer.createTransport({
-        host: 'smtp.mandrillapp.com',
-        port: 465,
-        auth:{
-          user:"deviego",
-          pass:"md-zx9sQCC4lMeL_Ehm9wGnNw"
-         
-        }
-        
-      });
+  if (!body) return res.status(403).send({ error: 'You must send the body content.' })
+  const { name, toEmail, subject }: IRequest = body
 
-      const mailDetails = {
-        from: data.name,
-        to: "deviego4@gmail.com",
-        subject: `${data.name} - via deviego.dev`,
-        text: `
-        Name: ${data.name}
-        Email: ${data.email}
-        ${data.message}`
-      };
-     
+  if (!toEmail || !subject) return res.status(400).send({ error: 'Bad request' })
 
-      await mailTransporter.sendMail(mailDetails); 
-      console.log(mailDetails)
-      return res.status(200).json({ message: 'Email sent' });
-    } catch (error: any) {
-      res
-        .status(510)
-        .send({ message: `cheguei mais dei ruim: ${error.message}` });
-    }
+  const mail = {
+    to: toEmail,
+    from: EMAIL_SENDER!,
+    subject: subject,
+    html: 
+    `
+      <div>
+        <strong>You got a new email from ${name}, ${toEmail}</strong>
+        <p>${subject}</p>
+      </div>
+    `
+  };
 
-  }
-  return res.status(405).json({ message: 'method not accept' });
+  await sgMail.send(mail)
+
+  return res.status(201).send({ msg: `Mail sent` })
 }
