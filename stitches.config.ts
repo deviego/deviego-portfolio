@@ -1,4 +1,4 @@
-import { createStitches } from '@stitches/react';
+import { createStitches } from '@stitches/react'
 
 export const {
   styled,
@@ -58,7 +58,7 @@ export const {
       height: value
     })
   }
-});
+})
 
 const globalStyles = globalCss({
   '*': {
@@ -205,6 +205,6 @@ const globalStyles = globalCss({
       fontStyle: 'italic'
     }
   ]
-});
+})
 
-globalStyles();
+globalStyles()

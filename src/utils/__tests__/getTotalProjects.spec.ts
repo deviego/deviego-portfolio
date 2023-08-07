@@ -1,5 +1,5 @@
-import { it } from 'vitest';
-import { getTotalProjects } from '../getTotalProjects';
+import { it } from 'vitest'
+import { getTotalProjects } from '../getTotalProjects'
 
 const projects = [
   {
@@ -19,10 +19,10 @@ const projects = [
       }
     ]
   }
-];
+]
 
 it('should cont the total projects correctly', () => {
-  const result = getTotalProjects(projects);
+  const result = getTotalProjects(projects)
 
-  expect(result).toEqual(3);
-});
+  expect(result).toEqual(3)
+})

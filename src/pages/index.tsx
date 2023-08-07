@@ -1,18 +1,13 @@
-import Head from 'next/head';
-import Typewriter from 'typewriter-effect';
-import { Layout } from '../components/Layout';
-import { OpenCommandPalette } from '../components/OpenCommandPalette';
-import { getLocaleProps, useI18n } from '../locales';
-import { Container, Content, Title } from '../styles/home';
+import Head from 'next/head'
+import Typewriter from 'typewriter-effect'
+import { Layout } from '../components/Layout'
+import { OpenCommandPalette } from '../components/OpenCommandPalette'
+import { getLocaleProps, useI18n } from '../locales'
+import { Container, Content, Title } from '../styles/home'
 
-interface HomeProps {
-  title: string;
-  description: string;
-}
-
-export default function Home() {
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.home');
+export default function Home () {
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.home')
 
   return (
     <Layout>
@@ -42,7 +37,7 @@ export default function Home() {
         </Content>
       </Container>
     </Layout>
-  );
+  )
 }
 
-export const getStaticProps = getLocaleProps();
+export const getStaticProps = getLocaleProps()

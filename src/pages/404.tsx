@@ -1,8 +1,11 @@
-import Lottie from 'lottie-react';
-import lottieAnimation from '../../public/static/icons/404.json';
-import { Layout } from '../components/Layout';
+import Lottie from 'lottie-react'
+import lottieAnimation from '../../public/static/icons/404.json'
+import { Layout } from '../components/Layout'
 
-const Box = styled('div', { boxSizing: 'border-box' });
+import { styled } from '../../stitches.config'
+import { ShortcutError } from '../components/ShortcutError'
+
+const Box = styled('div', { boxSizing: 'border-box' })
 
 const NotFound = () => {
   return (
@@ -35,10 +38,7 @@ const NotFound = () => {
         <ShortcutError />
       </Box>
     </Layout>
-  );
-};
+  )
+}
 
-export default NotFound;
-
-import { styled } from '../../stitches.config';
-import { ShortcutError } from '../components/ShortcutError';
+export default NotFound

@@ -38,7 +38,7 @@ export default {
   'pages.about.intro.3':
     'Atualmente, estou trabalhando em conjunto com a empresa Serpens, fazendo projetos e soluções para empresas do mercado, criando diversas soluções e plataformas.',
   'pages.about.intro.4':
-    'Esportista desde cedo praticando <strong>Natação por (3 anos), karate (8 anos), Basquete (3 anos)</strong>. Quando não estou codando ou fazendo um trabalho de criador de conteúdo, gosto de ir à academia, conversar com amigos no Discord, codar projetos paralelos e ajudar quem está começando na comunidade da <strong>Rocketseat</strong>,' ,
+    'Esportista desde cedo praticando <strong>Natação por (3 anos), karate (8 anos), Basquete (3 anos)</strong>. Quando não estou codando ou fazendo um trabalho de criador de conteúdo, gosto de ir à academia, conversar com amigos no Discord, codar projetos paralelos e ajudar quem está começando na comunidade da <strong>Rocketseat</strong>,',
   'pages.about.career': 'Carreira',
 
   'pages.projects.title': 'Projetos | Diego Domingues',
@@ -90,4 +90,4 @@ export default {
   'pages.contact.labels.message': 'mensagem',
   'pages.contact.placeholders.message': 'Sua mensagem aqui :P',
   'pages.contact.send': 'Enviar'
-} as const;
+} as const

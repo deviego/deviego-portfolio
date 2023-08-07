@@ -1,4 +1,4 @@
-import type { Job } from '../components/containers/About/Career';
+import type { Job } from '../components/containers/About/Career'
 
 export const jobs: Job[] = [
   {
@@ -25,4 +25,4 @@ export const jobs: Job[] = [
     endDate: '',
     location: 'Rio de Janeiro, RJ'
   }
-];
+]

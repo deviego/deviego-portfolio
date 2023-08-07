@@ -1,9 +1,9 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../stitches.config'
 
 export const Title = styled('h1', {
   background: '#fff',
-  WebkitBackgroundClip: 'text',
-});
+  WebkitBackgroundClip: 'text'
+})
 
 export const Container = styled('div', {
   padding: '$navHeightMobile 1.25rem',
@@ -14,7 +14,7 @@ export const Container = styled('div', {
   display: 'flex',
   maxWidth: '760px',
   '@bp2': { width: 800, padding: '$navHeightDesktop 0' }
-});
+})
 
 export const Content = styled('main', {
   fontSize: '1rem',
@@ -25,4 +25,4 @@ export const Content = styled('main', {
   zIndex: 1,
   height: '100%',
   padding: '0 1.25rem'
-});
+})

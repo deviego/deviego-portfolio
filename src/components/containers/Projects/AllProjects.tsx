@@ -1,4 +1,4 @@
-import { projects } from '../../../data/projects';
+import { projects } from '../../../data/projects'
 
 export const AllProjects = () => {
   return (
@@ -18,5 +18,5 @@ export const AllProjects = () => {
         </div>
       ))}
     </>
-  );
-};
+  )
+}

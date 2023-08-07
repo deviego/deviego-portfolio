@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import { useI18n } from '../../../locales';
-import { Container, Paragraph, Section } from './styles';
+import Image from 'next/image'
+import { useI18n } from '../../../locales'
+import { Container, Paragraph, Section } from './styles'
 
 export const Intro = () => {
-  const { scopedT } = useI18n();
-  const t = scopedT('pages.about.intro');
+  const { scopedT } = useI18n()
+  const t = scopedT('pages.about.intro')
 
   return (
     <Container>
@@ -45,5 +45,5 @@ export const Intro = () => {
         <Paragraph dangerouslySetInnerHTML={{ __html: t('4') }} />
       </Section>
     </Container>
-  );
-};
+  )
+}
