@@ -29,8 +29,9 @@ export default function Contact ({
   const { scopedT } = useI18n()
   const t = scopedT('pages.contact')
 
-  const [isEmailSent, setIsEmailSent] = useState(false)
-  const [showToast, setShowToast] = useState(false)
+  const [isEmailSent, setIsEmailSent] = useState<boolean>(false)
+  const [showToast, setShowToast] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const {
     register,
@@ -42,6 +43,8 @@ export default function Contact ({
   })
 
   async function onSubmit (data: IEmailInputs) {
+    setIsLoading(true)
+
     await api.post('/email', {
       name: data.name,
       subject: data.message,
@@ -53,6 +56,7 @@ export default function Contact ({
       })
       .finally(() => {
         setIsEmailSent(false)
+        setIsLoading(false)
         reset()
       })
   }
@@ -96,7 +100,7 @@ export default function Contact ({
       {errors.message && <p>{errors.message.message}</p>}
       </FormGroup>
       <FormGroup>
-      <Button type='submit'>Send</Button>
+      <Button disabled={isLoading} type='submit'>Send</Button>
       </FormGroup>
       </Form>
 
