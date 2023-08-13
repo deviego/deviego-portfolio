@@ -13,7 +13,7 @@ export const Container = styled('div', {
   alignItems: 'center',
   display: 'flex',
   maxWidth: '760px',
-  '@bp2': { width: 800, padding: '$navHeightDesktop 0' }
+  
 })
 
 export const Content = styled('main', {

@@ -29,6 +29,7 @@ export function Toast ({
   children
 }: ToastProps) {
   const iconColor = isSuccess ? '#4cb782' : '#b75c4c'
+  console.log(isSuccess)
   const Icon = (props: IconBaseProps) => {
     return isSuccess
       ? (

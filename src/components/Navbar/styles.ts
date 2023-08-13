@@ -42,8 +42,8 @@ export const CmdButton = styled('button', {
 })
 
 export const CmdIcon = styled(RiCommandLine, {
-  width: '1.5rem',
-  height: '1.5rem'
+  width: '2rem',
+  height: '2rem'
 })
 
 export const LogoButton = styled('a', {
@@ -77,7 +77,7 @@ export const Nav = styled('nav', {
 export const Aside = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  paddingRight: '0.75rem',
+  paddingRight: '2rem',
   marginLeft: 'auto'
 })
 

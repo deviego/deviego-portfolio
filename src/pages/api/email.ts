@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import sgMail from '@sendgrid/mail'
+import { Resend } from 'resend'
 
-const { SG_API_KEY, EMAIL_SENDER } = process.env
-sgMail.setApiKey(SG_API_KEY ?? '')
-
+const { RESEND_API_KEY, EMAIL_SENDER } = process.env
+const resend = new Resend(RESEND_API_KEY)
 interface IRequest {
   name: string
   toEmail: string
@@ -19,10 +18,8 @@ export default async function onSendMail (
   if (!body) { res.status(403).send({ error: 'You must send the body content.' }); return }
   const { name, toEmail, subject }: IRequest = body
 
-  if (!toEmail || !subject) { res.status(400).send({ error: 'Bad request' }); return }
-
   const mail = {
-    to: toEmail,
+    to: 'deviego4@gmail.com',
     from: EMAIL_SENDER ?? '',
     subject,
     html:
@@ -34,6 +31,6 @@ export default async function onSendMail (
     `
   }
 
-  await sgMail.send(mail)
-  res.status(201).send({ msg: 'Mail sent' })
+  await resend.emails.send(mail).catch()
+  res.status(201)
 }

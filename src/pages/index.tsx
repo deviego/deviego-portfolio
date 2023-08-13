@@ -19,7 +19,7 @@ export default function Home () {
       </Head>
       <Container>
         <Content>
-          <div>
+          <div >
             <Title>{t('title')}</Title>
             <div>
               <strong>{t('meta')}</strong>
